@@ -1,4 +1,4 @@
-name: Deploy Backoffice on Production
+name: Deploy nginx with Letsencrypt on production
 on:
   workflow_dispatch
 
