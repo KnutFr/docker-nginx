@@ -5,8 +5,6 @@ services:
     image: jwilder/nginx-proxy
     container_name: nginx-proxy
     restart: always
-    networks:
-      - knutech
     ports:
       - "80:80"
       - "443:443"
@@ -22,8 +20,6 @@ services:
     container_name: letsencrypt
     environment:
       NGINX_PROXY_CONTAINER: nginx-proxy
-    networks:
-      - knutech
     restart: always
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
@@ -32,4 +28,6 @@ services:
       - /usr/share/nginx/html:/usr/share/nginx/html
 
 networks:
-  knutech:
+  default:
+    external:
+      name: knutech
