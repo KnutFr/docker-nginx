@@ -20,7 +20,7 @@ services:
       - letsencrypt-vhost-d:/etc/nginx/vhost.d
       - letsencrypt-html:/usr/share/nginx/html
     environment:
-      - DEFAULT_EMAIL=some_email@yourdomain.tld
+      - DEFAULT_EMAIL=adrien@knutech.fr
       - NGINX_PROXY_CONTAINER=nginx-proxy
 
 
